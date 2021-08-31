@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a7314c748df9a4194c70279b2b5196, type: 3}
+  m_Name: AntibioticsB
+  m_EditorClassIdentifier: 
+  id: 2c343c8a-b788-448c-808e-c22d1f87e42d
+  name: Antibiotics
+  texture: {fileID: 21300000, guid: 91d87b17392321f4ca15b5322b5536a3, type: 3}
+  description: Cures a few diseases of grain B
+  textForTheNews: 
+  cost: 100
+  baseReputationImpact: 50
+  moneyDeltaImpact: -2
+  reputationDeltaImpact: 1
+  serverEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6332000663300207203, guid: 4b1b8814e58b248c483eac04dc18a063,
+          type: 3}
+        m_MethodName: UseAntibiotic
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Assets.Generic.CardEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  clientEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.CardEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  bothEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.CardEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  npcEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.NpcEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  cardType: 2
+  incubationTime: 0
+  mortalityRate: 0
+  contagiousRate: 0
+  initialContagiousRadius: 5
+  vectorsOfTransmission: 0
+  typeOfAgent: 0
+  AdvancedVaccination: 0
+  BasicVaccination: 0
+  healthCarePolicyType: 1
+  strandType: 2
+  effectRange: 5
+  mentalDiseaseType: 0

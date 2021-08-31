@@ -1,0 +1,186 @@
+#pragma kernel CSCornerSamples
+#pragma kernel CSCellData
+#pragma kernel CSCalculateFunctionData
+#pragma kernel CSDrawOutLine
+#pragma kernel CSClear
+
+
+RWTexture2D<float4> SmallTexture;
+float2 meshPosition;
+RWStructuredBuffer<float2> blobInstanceArray;
+float textureSize;              //SIZE OF THE CORNERS ARRAY
+float blobInstanceArrayCount;   //NUMBER OF INSTANCES TO CALCULATES 
+float blobRadius;               //Radius of a blob
+float meshSize;                 //Scale of the rendering plane
+RWStructuredBuffer<float> cornersData;
+RWStructuredBuffer<int> cellsData;
+
+struct functionData{
+    float m;
+    float b;
+};
+
+functionData new_functionData (float m, float b){
+    functionData f;
+    f.m = m;
+    f.b = b;
+    return f;
+}
+RWStructuredBuffer<functionData> cellFunction;
+
+//----------------------------------------------------------------
+int GetCornersCoords(int2 pos){
+    return pos.x + pos.y * (textureSize + 1);
+}
+float Metaball(float2 uv, float2 pos){
+    return blobRadius / dot(uv - pos, uv - pos);
+}
+
+[numthreads(4,4,1)]
+void CSCornerSamples(uint3 id : SV_DISPATCHTHREADID){
+    float2 uv = id / textureSize;
+    uv = uv * meshSize - float2(meshSize, meshSize) / 2;
+
+    if(id.x > textureSize + 1)
+        return;
+    if(id.y > textureSize + 1)
+        return;
+
+    float metaballs = 0;
+
+    for(int i = 0; i < blobInstanceArrayCount; i++)
+        metaballs += Metaball(uv, blobInstanceArray[i] - meshPosition);
+
+    //SmallTexture[id.xy] = float4(metaballs, 0 , 0 ,1);
+    cornersData[GetCornersCoords(id)] = metaballs;
+}
+//----------------------------------------------------------------
+int GetCellCoords(int2 pos){
+    return pos.x + pos.y * (textureSize);
+}
+[numthreads(4,4,1)]
+void CSCellData(uint3 id : SV_DISPATCHTHREADID){
+    int value = 0;
+
+    int2 currentPos = int2(id.x, id.y);
+
+    if(cornersData[GetCornersCoords(currentPos)] >= 1.0){ 
+        value += 1;
+    }
+
+    currentPos = int2(id.x + 1, id.y);
+    if(cornersData[GetCornersCoords(currentPos)] >= 1.0){
+        value += 2;
+    }
+
+    currentPos = int2(id.x, id.y + 1);
+    if(cornersData[GetCornersCoords(currentPos)] >= 1.0){
+        value += 8;
+    }
+
+    currentPos = int2(id.x + 1, id.y + 1);
+    if(cornersData[GetCornersCoords(currentPos)] >= 1.0){
+        value += 4;
+    }
+
+    cellsData[GetCellCoords(id.xy)] = value;
+    currentPos = int2(id.x, id.y);
+}
+//----------------------------------------------------------------
+functionData CalculateFunction(float2 point1, float2 point2, int2 coords){
+    float m = (point2.y - point1.y) / (point2.x- point1.x);
+    float b = point1.y - (m * point1.x);
+    return new_functionData(m,b);
+}
+[numthreads(4,4,1)]
+void CSCalculateFunctionData(uint3 id : SV_DISPATCHTHREADID){
+    int2 uvs = int2(id.x, id.y);
+    int cellValue = cellsData[GetCellCoords(uvs)];
+
+    functionData cellFunctionData = new_functionData(0, 0);
+    float result = 0;
+    if(cellValue == 1 || cellValue == 14){
+        cellFunctionData = CalculateFunction(float2(0.0, 0.5), float2(0.5, 0.0), uvs);
+    }
+    else if(cellValue == 2 || cellValue == 13){
+        cellFunctionData = CalculateFunction(float2(0.5, 0.0), float2(1.0, 0.5), uvs);
+    }
+    else if(cellValue == 3 || cellValue == 12){
+        cellFunctionData = CalculateFunction(float2(0.0, 0.5), float2(1.0, 0.5), uvs);
+    }
+    else if(cellValue == 4 || cellValue == 11){
+        cellFunctionData = CalculateFunction(float2(0.5, 1.0), float2(1.0, 0.5), uvs);
+    }
+    else if(cellValue == 7 || cellValue == 8){
+        cellFunctionData = CalculateFunction(float2(0.0, 0.5), float2(0.5, 1.0), uvs);
+    }
+
+    /*if(cellValue != 0 && cellValue != 15){
+        SmallTexture[id.xy] = float4(1, 0 , 0 ,1);
+    }*/
+
+    /*else if(cellValue == 5 || cellValue == 10){
+        cellFunctionData = CalculateFunction(float2( 0, 0), float2( 0, 0), uvs);
+    }
+    else if(cellValue == 6 || cellValue == 9){
+        cellFunctionData = CalculateFunction(float2( 0, 0), float2( 0, 0), uvs);
+    }*/
+
+    cellFunction[GetCellCoords(uvs)] = cellFunctionData;
+}
+//----------------------------------------------------------------
+
+float lineThickness;
+float plotHorizontal(int2 uv, float value){
+  return  smoothstep( value - lineThickness, value, uv.y) -
+          smoothstep( value, value + lineThickness, uv.y);
+}
+float plotVertical(float2 uv, float value){
+    return  smoothstep( value - lineThickness, value, uv.x) -
+            smoothstep( value, value + lineThickness, uv.x);
+}
+
+
+
+float pixelToCorner;    //32 / 256
+float cornerToPixel;    //256 / 32
+
+RWTexture2D<float4> Result;
+[numthreads(8,8,1)]
+void CSDrawOutLine(uint3 id : SV_DISPATCHTHREADID){
+    int2 cornerUV = int2(id.x * pixelToCorner, id.y * pixelToCorner);
+    int cellValue = cellsData[GetCellCoords(cornerUV)];
+
+    float result = 0;
+    
+    if(cellValue == 0 || cellValue == 15){
+        result = 0;
+    }
+    else if(cellValue == 6 || cellValue == 9){
+        result = plotVertical(id.xy, 0.5 * cornerToPixel + cornerUV.x * cornerToPixel);
+    }
+    else if (cellValue == 5){
+        float value = (id.x - cornerUV.x * cornerToPixel) + (0.5 + cornerUV.y) * cornerToPixel;
+        result = plotHorizontal(id.xy, value);
+        value = (id.x - cornerUV.x * cornerToPixel) + (-0.5 + cornerUV.y) * cornerToPixel;
+        result += plotHorizontal(id.xy, value);
+    }
+    else if (cellValue == 10){
+        float value = -(id.x - cornerUV.x * cornerToPixel) + (0.5 + cornerUV.y) * cornerToPixel;
+        result = plotHorizontal(id.xy, value);
+        value = -(id.x - cornerUV.x * cornerToPixel) + (1.5 + cornerUV.y) * cornerToPixel;
+        result += plotHorizontal(id.xy, value);
+    }
+    else{
+        functionData f = cellFunction[GetCellCoords(cornerUV)];
+        float value = f.m * (id.x - cornerUV.x * cornerToPixel) + (f.b + cornerUV.y) * cornerToPixel;
+        result = plotHorizontal(id.xy, value);
+    }
+
+    Result[id.xy] = float4(result, 0, 0, 1);
+}
+
+[numthreads(8,8,1)]
+void CSClear(uint3 id: SV_DISPATCHTHREADID){
+    Result[id.xy] = float4(0,0,0,0);
+}

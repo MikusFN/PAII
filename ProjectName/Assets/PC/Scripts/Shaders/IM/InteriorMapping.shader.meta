@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b1ebc8050132e2a4f9c5d289cced2c5c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _TexturaJanela: {fileID: 2800000, guid: 9f792f206701e97419f84adb9af3c102, type: 3}
+  - _MetalicMAP: {fileID: 2800000, guid: 0cd484e00e0a82046ae0382f985061aa, type: 3}
+  - _NormalMap: {fileID: 2800000, guid: e21e354f6c7fe964d8ef0917b874049d, type: 3}
+  - _TexturaInterior: {fileID: 2800000, guid: 7269550ecac5d2741b8aa9e6bdbba84e, type: 3}
+  - _TexturaDecoracoes: {fileID: 2800000, guid: 45583ca96b28cc6409409f9d8598e105,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

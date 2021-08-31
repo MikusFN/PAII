@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a7314c748df9a4194c70279b2b5196, type: 3}
+  m_Name: ImprovedSanitation
+  m_EditorClassIdentifier: 
+  id: e888cbb8-a65c-46df-bef2-1f1c2d64bdcb
+  name: Imoproved sanitation
+  texture: {fileID: 21300000, guid: 0b72e53c47172d64d8400749efec3746, type: 3}
+  description: 
+  textForTheNews: 
+  cost: 0
+  baseReputationImpact: 200
+  moneyDeltaImpact: 0
+  reputationDeltaImpact: 1
+  serverEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.CardEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  clientEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.CardEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  bothEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.CardEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  npcEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Assets.Generic.NpcEvent, Shared, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  cardType: 2
+  incubationTime: 0
+  mortalityRate: 0
+  contagiousRate: 0
+  initialContagiousRadius: 0
+  vectorsOfTransmission: 0
+  typeOfAgent: 0
+  healthCarePolicyType: 0

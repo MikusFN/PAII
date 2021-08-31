@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4826458741697580216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4826458741697580217}
+  - component: {fileID: 4826458741697580166}
+  m_Layer: 5
+  m_Name: UiManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4826458741697580217
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826458741697580216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4826458741697580166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826458741697580216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8316bdec181b35e49947e9cf5da4cfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topArea: {fileID: 0}
+  gameButton: {fileID: 0}
+  researchButton: {fileID: 0}
+  actionButton: {fileID: 0}
+  moneyText: {fileID: 0}
+  reputationText: {fileID: 0}
+  connectScene: {fileID: 0}
+  watingImg: {fileID: 0}
+  playerNameText: {fileID: 0}
+  playerColor: {fileID: 0}
+  readyButton: {fileID: 0}
+  hostStartButton: {fileID: 0}
+  beforeReady: {fileID: 0}
+  afterReady: {fileID: 0}
+  colorPickTemplate: {fileID: 1419707469388793490, guid: 2f339f25bf8a90e4898d7731d6e60083,
+    type: 3}
+  colorPickerParent: {fileID: 0}
+  gameScene: {fileID: 0}
+  cardVisualizer: {fileID: 0}
+  areaPicker: {fileID: 0}
+  playerPickerTemplate: {fileID: 7801851604765278922, guid: de2759b019f84f148b723651d445043b,
+    type: 3}
+  playerPickerParent: {fileID: 0}
+  cardName: {fileID: 0}
+  cardDescription: {fileID: 0}
+  cardImage: {fileID: 0}
+  diseaseText: {fileID: 0}
+  researchScene: {fileID: 0}
+  layoutResearch: {fileID: 0}
+  instanciablePrefab: {fileID: 8563667213347334712, guid: a222dc6a6f67445e8818cf799c06c058,
+    type: 3}
+  actionScene: {fileID: 0}
