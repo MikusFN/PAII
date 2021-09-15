@@ -1,6 +1,6 @@
 Win
 PlayerPath?
-C:/Users/Miguel/Desktop/New folder/Projecto II.exe
+E:/PC Stuff/CCMasters/EDJD/3º Ano/2º Semestre/PAII/Build/Projecto II.exe
 SceneListBegin?
 Assets/PC/Scenes/zzCityPopulation.unity
 SceneListEnd?
@@ -24,11 +24,12 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 2b19be13f00df62e6d4d4f5539bcad51 NavMeshComponents.dll:UnityEngine.AI.NavMeshModifier
 c8c672fee8a258266e51b55a210b8083 NavMeshComponents.dll:UnityEngine.AI.NavMeshLink
-71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.Npcs.NpcStatsManager
+db0fbd5b032fac5374972b26963a77fd Android.dll:Assets.Android.PlayerNameIDTemplate
+b357ee24c5b9b5115d3786611e03023e PC.dll:Assets.PC.Npcs.NpcStatsManager
 71f7f12b8d0f4fd73590db8bcb6d453c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Bloom
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
-273aa3a815821856329124a55b16af1c PC.dll:Assets.PC.GameManagerPC
+b4772f1946e8ef220efaae26b213d271 PC.dll:Assets.PC.GameManagerPC
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -101,6 +102,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 38bcb4d3f9a1812fd650f92e87a4cf64 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessProfile
 dcf89182353e91cec33b01733121c2b8 PC.dll:.NewsBehaviour
 b4b2f5c17e950a418ce9e3c79c3850d4 PC.dll:Assets.PC.DebugNetworkPCConsole
+e80e9b5684b7f0d01d0b87d6971193fd PC.dll:Assets.PC.PlayerCardBehaviour
 e82c0521cdfe8cb6a168ef7208a98d4a Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Vignette
 71bb6a6b6c8f052f948db64c7dd3ca4f Addons.dll:.FPSDisplay
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -117,6 +119,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.SelectParticlesManager
+7606c048834733c162c7f4c29c25b5f6 Android.dll:Assets.Android.DieaseNameIDPlayerTemplate
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -131,7 +134,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-4f1e57102dba108f4c9e273f76b61b45 PC.dll:Assets.PC.Npcs.NpcStats
+833c63fe5aef688a1a513c1c60ca5114 PC.dll:Assets.PC.Npcs.NpcStats
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.PathFinding.NavigationBaker
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -143,6 +146,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 badcc59525f594d001e21f9bad5dbc4f PC.dll:Assets.PC.Dissolve
 7299a528424874bcf6b5736b5305ac37 NavMeshComponents.dll:UnityEngine.AI.NavMeshModifierVolume
 61b9d9b6f4b6a222dfea8b131b3d3227 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ChromaticAberration
+70d5ae9cf7f83bdbcc75880044866e84 Android.dll:.PerceptionDisease
 a6fcfc0b335b36d3ad3a68026dece5c6 PC.dll:Assets.PC.BlobManager
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Addons.dll:Assets.DebugApplication.DebugConsole
@@ -151,6 +155,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 d6fc8d3165070298511ec776ea575626 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessResources
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
+71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.Npcs.ComponentListing
 a53651ee3996fbba20dfe0fce02f0b23 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AutoExposure
 71bb6a6b6c8f052f948db64c7dd3ca4f Android.dll:Assets.Android.ColorPickerBehaviour
 50c443b12ccc0b475183318b5088bcc5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessDebug
@@ -158,7 +163,7 @@ a53651ee3996fbba20dfe0fce02f0b23 Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 71bb6a6b6c8f052f948db64c7dd3ca4f Android.dll:Assets.Android.drawOneCard
 8a7fa2b6be78c9e9ee57b234baea4748 Android.dll:Assets.Android.CardController
-2e164fba9f8424838c2db70f6d526546 PC.dll:Assets.PC.WeatherSystem.WeatherManager
+94ff9fe666d18bdc40763520da890610 PC.dll:Assets.PC.WeatherSystem.WeatherManager
 573768104ae08b2abc3825874702a270 PC.dll:Assets.PC.PathFinding.UpdateDestination
 71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.ServerFunctionManager
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -175,11 +180,10 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-95a20399a4b64561310cafe64d156745 PC.dll:Assets.PC.Npcs.NpcManager
+0c38b4d70099de5774857dc00fb02ffb PC.dll:Assets.PC.Npcs.NpcManager
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
-60f422c3ad6f3a2f7c1a663f519723ab Android.dll:Assets.Android.CamShader
 cf96e5f7b3d069bab453925bd41be04e UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 259d013faac28e8ba0aa2a7542273735 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -200,12 +204,12 @@ a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 8d4458b476a9a4dd8df843a849fcfffa NavMeshComponents.dll:UnityEngine.AI.NavMeshSurface
 8bae908402c9e6ba5bc1ccd2edea7ab3 Android.dll:Assets.Android.CommunicationsUIManager
 508ea80c05aee208e77582fafeefd368 Android.dll:Assets.Android.PlayerPickerBehaviour
-3a136040a530681cc93a3e55b2983d18 Shared.dll:Assets.Generic.Card
+97190aa39aaa35a581054eac9b925331 Shared.dll:Assets.Generic.Card
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-71bb6a6b6c8f052f948db64c7dd3ca4f Android.dll:Assets.Android.Hysteria
+14403b258b807c25a62381a73db5a400 Android.dll:Assets.Android.Hysteria
 4a80976dd16093fa2e7e1cea97a4cfbc PC.dll:Assets.PC.PCG.ProceduralCity
-e13170b0b36ab80086bfae8b65056ebf Android.dll:Assets.Android.UIManagerAndroid
-e419da04580eddf7a1cefcbea92b2467 PC.dll:Assets.PC.UIManagerPC
+ef67b68e5eea853bf19b14377792929d Android.dll:Assets.Android.UIManagerAndroid
+e1791a77e60b689922dd3e60658df3a6 PC.dll:Assets.PC.UIManagerPC
 dbee3e442df0615e3df5873db9e59eac Android.dll:Assets.Android.AreaPickerBehaviour
 c9195971b800ad09f91e1623da8d8f9d Android.dll:Assets.Android.ResearchCardTemplateManager
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
@@ -218,6 +222,9 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 ac6acd886c54c48c599ab5fed5781ea7 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AmbientOcclusion
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+5641b3ba54d9616cce08e5e4260805b5 Assembly-CSharp.dll:Assets.PC.NewsFeed.NewsFeedTextManager
 71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.CardBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f PC.dll:Assets.PC.PathFinding.GiveDestination
 5fe11a39339727bf58366e80b4f993d9 Android.dll:Assets.Android.AndroidAssetManager
+0c7c5fd650d0dc4d708deab136c5b228 Android.dll:Assets.Android.CamShader
+c6d94e38a727101dd467b56d57d9c12f Assembly-CSharp.dll:.SmoothMouseLook

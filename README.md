@@ -1,2 +1,2 @@
-# PAII
-Mobile/PC hybrid Card Game
+# Projecto Aplicado II
+

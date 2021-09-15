@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PC/Scenes/zzCityPopulation.unity
     guid: 14239da1a46460d4ca5999b691375d48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Android/Scenes/androidMoises2.unity
     guid: 2cd22c2a1d1772d4e9e6bc2c0de174e5
-  - enabled: 1
+  - enabled: 0
     path: Assets/PC/Scenes/pcTestScene.unity
     guid: 0f51acc85ec714d4e8e9b1d5a92f0d80
   m_configObjects: {}
